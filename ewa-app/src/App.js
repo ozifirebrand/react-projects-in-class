@@ -5,7 +5,7 @@ function App (){
   return(
       <div className="container">
           <Laptop name ="Apple" color = "gold" madeIn="China"/>
-              <Laptop name ="Dell" color = "black" madeIn="Lagos"/>
+          <Laptop name ="Dell" color = "black" madeIn="Lagos"/>
       </div>
       )
   }

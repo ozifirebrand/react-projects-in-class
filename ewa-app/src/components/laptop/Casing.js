@@ -1,8 +1,8 @@
 import React from "react";
 import Screen from "./Screen";
-function Casing(){
+const Casing = (props)=>{
     return(
-        <div className={"casing"}>
+        <div className={"casing"} style={{border: `30px solid ${props.color}`}}>
             <Screen/>
         </div>
     )
