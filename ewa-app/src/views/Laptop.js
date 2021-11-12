@@ -3,12 +3,14 @@ import "../Laptop.css"
 
 import Casing from "../components/laptop/Casing"
 import Keyboard from "../components/laptop/Keyboard"
-import Screen from "../components/laptop/Screen"
-const Laptop = ()=> {
+
+const Laptop = (props)=> {
+    let {name, color, black} = props
     return(
         <div className={"laptop"}>
-            <Casing/>
-            <Keyboard/>
+            <Casing color = {color}/>
+            <Keyboard name={"Apple"}/>
+            <Keyboard name={"Hp"}/>
         </div>
     )
 }

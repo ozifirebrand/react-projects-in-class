@@ -23,10 +23,16 @@
 
 
 .keyboard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-top: 2px;
     background-color: rgb(0, 0, 0);
     height: 20vh;
     width: 40vh;
     border-radius: 4px;
     border-inline: 10px solid white;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
 }

@@ -4,7 +4,8 @@ import "./App.css"
 function App (){
   return(
       <div className="container">
-          <Laptop/>
+          <Laptop name ="Apple" color = "gold" madeIn="China"/>
+              <Laptop name ="Dell" color = "black" madeIn="Lagos"/>
       </div>
       )
   }

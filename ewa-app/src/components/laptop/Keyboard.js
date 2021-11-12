@@ -1,8 +1,8 @@
 import React from "react";
-function Keyboard (){
+const Keyboard = (props)=>{
     return (
         <div className={"keyboard"}>
-            Keyboard
+            {props.name} Keyboard
         </div>
     )
 }
