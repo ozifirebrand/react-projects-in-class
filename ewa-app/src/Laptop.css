@@ -22,7 +22,7 @@
 
 
 .keyboard{
-    display: flex;
+    display: block;
     justify-content: center;
     align-items: center;
     margin-top: 2px;
@@ -34,4 +34,11 @@
     color: white;
     text-transform: uppercase;
     font-weight: bold;
+}
+
+.button{
+    width: 2vw;
+    margin-top: 5px;
+    margin-left: 35vw;
+    color: darkorange;
 }
