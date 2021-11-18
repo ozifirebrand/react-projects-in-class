@@ -2,6 +2,7 @@ import React from 'react';
 import Input from "../../reusables/Input";
 import "./login.css"
 import img from "../../../../assets/background.svg"
+import Button from "../../reusables/button";
 
 const Login = () => {
 
@@ -29,6 +30,7 @@ const Login = () => {
             <div className={"form-container"}>
                 {inputFields.map((field, index)=> <Input key = {index} field={ field}/>)}
             </div>
+            <Button name = "login"/>
         </div>
     );
 };

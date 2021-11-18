@@ -61,3 +61,14 @@
     color: #8d8d8d;
     font-size: 12px;
 }
+
+.auth-button{
+    background-color: #004c4c;
+    color: white;
+    padding: 20px 20px;
+    border-radius: 4px;
+    position: absolute;
+    bottom: 6rem;
+    box-shadow: none;
+    width: 88%;
+}
