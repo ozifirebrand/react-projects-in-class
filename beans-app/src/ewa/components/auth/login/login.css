@@ -1,5 +1,5 @@
 .login-container{
-    background-color: gray;
+    background-color: floralwhite;
     height: 90vh;
     width: 20vw;
     padding: 20px;
@@ -45,5 +45,19 @@
 }
 
 .form-container{
+    margin-top: 10vmin;
+}
 
+.text-container{
+    width: 55%;
+    color: #fff;
+}
+
+.text-container h4{
+    color: gray;
+}
+
+.text-container p{
+    color: #8d8d8d;
+    font-size: 12px;
 }

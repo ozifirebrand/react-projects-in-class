@@ -21,9 +21,9 @@ const Login = () => {
             <img className={"top-circle"} src = {img} alt={"circlebackground"}/>
 
             <div className={"text-container"}>
-                <h3>Welcome to Ewa</h3>
-                <p> Where your cravings
-                    for Beans are satisfied
+                <h4>Welcome to Ewa</h4>
+                <p> Get access to amazing ewa deals
+                    from the comfort of you home
                 </p>
             </div>
             <div className={"form-container"}>
