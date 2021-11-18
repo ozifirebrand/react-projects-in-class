@@ -1,10 +1,11 @@
 import React from "react";
 
-const Input = ()=>{
+const Input = (props)=>{
+    let {field} = props
     return(
         <div className={"input-container"}>
-            <p>Hi</p>
-            <input placeholder={"Enter something"}/>
+            <p>{field.label}</p>
+            <input placeholder={field.placeholder}/>
         </div>
     )
 }
