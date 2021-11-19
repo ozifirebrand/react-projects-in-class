@@ -1,23 +1,24 @@
 import React from 'react';
-import Input from "../../reusables/Input";
-import "./login.css"
-import img from "../../../../assets/background.svg"
+import "./register.css"
+import img from "../../../../assets/background.svg";
 import imgb from "../../../../assets/background2.svg"
 import Button from "../../reusables/button";
-
-const Login = () => {
-
+import Input from "../../reusables/Input";
+const Register = () => {
     const inputFields = [
+        {label: "FirstName", placeholder: "Enter your firstname"},
+        {label: "LastName", placeholder: "Enter your lastname"},
         {label: "Email", placeholder: "Enter your email"},
         {label: "Password", placeholder: "Enter your password"},
     ]
     return (
-        <div className={"login-container"}>
-            <div className={"login-header"}>
+        <div className={"register-container"}>
+            <div className={"register-header"}>
                 <div className={"ewa-logo"}>
+
                 </div>
                 <button>
-                    REGISTER
+                    LOGIN
                 </button>
             </div>
             <img className={"top-circle"} src = {img} alt={"circlebackground"}/>
@@ -29,12 +30,13 @@ const Login = () => {
                 </p>
             </div>
             <div className={"form-container"}>
-                {inputFields.map((field, index)=> <Input key = {index} field={ field}/>)}
+                {inputFields.map((field, index)=>
+                    <Input key = {index} field={ field}/>)}
             </div>
-            <Button name = "Login"/>
+            <Button name = "Register"/>
             <img className={"bottom-circle"} src={imgb} alt={"circlebackground"}/>
         </div>
     );
 };
 
-export default Login;
+export default Register;
