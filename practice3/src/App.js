@@ -1,5 +1,5 @@
 import React from 'react';
-import Register from "./views/Register";
+import Register from "./views/register/Register";
 
 const App = () => {
     return (
