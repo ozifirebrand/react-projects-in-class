@@ -16,18 +16,17 @@ function getGreeting(user){
     return <h1>Hi Stranger.</h1>
 }
 
-function tick(){
-    const element = (
+function Clock(props){
+    return(
         <div>
-            <h1>
-                Hello, world!
-            </h1>
-            <h2>
-                It is {new Date().toLocaleTimeString()}.
-            </h2>
+            <h1>Hello fam</h1>
+            <h2>It is {props.time.toLocaleTimeString()}.</h2>
         </div>
-    );
-    ReactDOM.render(element, document.getElementById("root"))
+    )
+}
+
+function tick(){
+    ReactDOM.render(<Clock time= {new Date()}/>, document.getElementById("root"))
 }
 
 const name = "Ozi Oma"
