@@ -3,9 +3,10 @@ import Input from "../../reusables/Input";
 import "./login.css"
 import img from "../../../../assets/background.svg"
 import imgb from "../../../../assets/background2.svg"
-import Button from "../../reusables/button";
+import Button from "../../reusables/Button";
 
-const Login = () => {
+const Login = (props) => {
+    let {setState} =props
 
     const inputFields = [
         {label: "Email", placeholder: "Enter your email"},
@@ -16,7 +17,7 @@ const Login = () => {
             <div className={"login-header"}>
                 <div className={"ewa-logo"}>
                 </div>
-                <button>
+                <button onClick={()=> setState("register")}>
                     REGISTER
                 </button>
             </div>

@@ -2,9 +2,12 @@ import React from 'react';
 import "./register.css"
 import img from "../../../../assets/background.svg";
 import imgb from "../../../../assets/background2.svg"
-import Button from "../../reusables/button";
+import Button from "../../reusables/Button";
 import Input from "../../reusables/Input";
-const Register = () => {
+const Register = (props) => {
+
+    let {setState} = props
+
     const inputFields = [
         {label: "FirstName", placeholder: "Enter your firstname"},
         {label: "LastName", placeholder: "Enter your lastname"},
@@ -17,7 +20,7 @@ const Register = () => {
                 <div className={"ewa-logo"}>
 
                 </div>
-                <button>
+                <button onClick={()=> setState("login")}>
                     LOGIN
                 </button>
             </div>
