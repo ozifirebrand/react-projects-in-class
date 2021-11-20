@@ -2,6 +2,8 @@ import React from 'react';
 import Input from "../../components/Input";
 import Button from "../../components/Button";
 import DialogBox from "../../components/DialogBox";
+import Header from "../../components/Header";
+import Container from "../../components/Container";
 
 const Register = (props) => {
     let {setState} = props
@@ -15,6 +17,8 @@ const Register = (props) => {
         <div>
             <Button name = "LOGIN" onClick ={() => setState("login")}/>
             <DialogBox/>
+            <Container/>
+            <Header favName = "Bolu"/>
             {inputFields.map((property, index)=>
             <Input key = {index} placeholder = {property}/>)}
             <Button name = "REGISTER" onClick ={() => setState("register")}/>
