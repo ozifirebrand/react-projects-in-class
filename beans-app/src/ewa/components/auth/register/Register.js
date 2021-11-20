@@ -17,9 +17,6 @@ const Register = (props) => {
     return (
         <div className={"register-container"}>
             <div className={"register-header"}>
-                <div className={"ewa-logo"}>
-
-                </div>
                 <button onClick={()=> setState("login")}>
                     LOGIN
                 </button>
@@ -29,7 +26,7 @@ const Register = (props) => {
             <div className={"text-container"}>
                 <h4>Welcome to Ewa</h4>
                 <p> Get access to amazing ewa deals
-                    from the comfort of you home
+                    from the comfort of your home
                 </p>
             </div>
             <div className={"form-container"}>
