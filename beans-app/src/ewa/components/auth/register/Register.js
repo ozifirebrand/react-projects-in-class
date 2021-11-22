@@ -17,7 +17,7 @@ const Register = (props) => {
     return (
         <div className={"register-container"}>
             <div className={"register-header"}>
-                <button onClick={()=> setState("login")}>
+                <button onClick={()=> setState("login")}>o
                     LOGIN
                 </button>
             </div>
