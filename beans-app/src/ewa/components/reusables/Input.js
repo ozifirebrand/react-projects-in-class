@@ -1,11 +1,11 @@
 import React from "react";
 
 const Input = (props)=>{
-    let {field} = props
+    let {field, onChange} = props
     return(
         <div className={"input-container"}>
             <p>{field.label}</p>
-            <input placeholder={field.placeholder}/>
+            <input name={field.name} onChange={onChange} placeholder={field.placeholder}/>
         </div>
     )
 }

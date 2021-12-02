@@ -14,7 +14,10 @@ const Register = (props) => {
     const [inputData, setInputData] = useState({initialData})
 
     function handleInput(e){
-        console.log(e)
+        let data= {
+            ...inputData, [e.target.name]: e.target.value
+        }
+        setInputData(data)
     }
 
     const inputFields = [
@@ -27,7 +30,7 @@ const Register = (props) => {
     return (
         <div className={"register-container"}>
             <div className={"register-header"}>
-                <button onClick={()=> setState("login")}>o
+                <button onClick={()=> setState("login")}>
                     LOGIN
                 </button>
             </div>
@@ -41,7 +44,7 @@ const Register = (props) => {
             </div>
             <div className={"form-container"}>
                 {inputFields.map((field, index)=>
-                    <Input onChange= {handleInput} key = {index} field={ field}/>)}
+                    <Input onChange= {handleInput} key = {index} field={field}/>)}
             </div>
             <Button name = "Register"/>
             <img className={"bottom-circle"} src={imgb} alt={"circlebackground"}/>
