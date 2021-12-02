@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import "./register.css"
 import img from "../../../../assets/background.svg";
 import imgb from "../../../../assets/background2.svg"
@@ -8,11 +8,17 @@ const Register = (props) => {
 
     let {setState} = props
 
+    let initialData = {
+        firstname: "", lastname: "", email: "", password: "", confirmPassword :""
+    }
+    const [inputData, setInputData] = useState({initialData})
+
     const inputFields = [
-        {label: "FirstName", placeholder: "Enter your firstname"},
-        {label: "LastName", placeholder: "Enter your lastname"},
-        {label: "Email", placeholder: "Enter your email"},
-        {label: "Password", placeholder: "Enter your password"},
+        {name: "firstname", label: "FirstName", placeholder: "Enter your firstname"},
+        {name: "lastname", label: "LastName", placeholder: "Enter your lastname"},
+        {name: "email", label: "Email", placeholder: "Enter your email"},
+        {name: "password", label: "Password", placeholder: "Enter your password"},
+        {name: "confirmPassword", label: "Confirm Password", placeholder: "Confirm your password"},
     ]
     return (
         <div className={"register-container"}>
