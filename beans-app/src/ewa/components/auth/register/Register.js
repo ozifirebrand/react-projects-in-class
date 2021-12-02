@@ -48,7 +48,7 @@ const Register = (props) => {
             </div>
             <div className={"form-container"}>
                 {inputFields.map((field, index)=>
-                    <Input onChange= {handleInput} key = {index} field={field}/>)}
+                    <Input value={inputData[field.name]} onChange= {handleInput} key = {index} field={field}/>)}
             </div>
             <Button name = "Register" onClick={registerUser}/>
             <img className={"bottom-circle"} src={imgb} alt={"circlebackground"}/>
