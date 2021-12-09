@@ -18,6 +18,10 @@ const Login = (props) => {
     }
 
     const [inputData, setInputData] = useState(initialData)
+    const handleInput = (e) =>{
+        let data = {...inputData, [e.target.name]: e.target.value}
+        setInputData(data)
+    }
 
     useEffect(
         ()=> {
@@ -36,10 +40,7 @@ const Login = (props) => {
             setAuthenticated(true)
         } else alert("User info is incomplete")
     }
-    const handleInput = (e) =>{
-        let data = {...inputData, [e.target.name]: e.target.value}
-        setInputData(data)
-    }
+
     return (
         <div className={"login-container"}>
             <div className={"login-header"}>

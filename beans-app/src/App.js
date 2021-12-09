@@ -20,9 +20,8 @@ function App(){
     const [authenticated, setAuthenticated] = useState(value)
   return(
       <div className={"container"}>
-          {
-          // {authenticated ? <Dashboard/>: <Auth setAuthenticated = {setAuthenticated}/> }
-              <Dashboard/>
+          {authenticated ? <Dashboard/>: <Auth setAuthenticated = {setAuthenticated}/> }
+               {/*<Dashboard/>*/}
           }
       </div>
   );
