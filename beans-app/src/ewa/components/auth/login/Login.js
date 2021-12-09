@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import Input from "../../reusables/Input";
 import "./login.css"
 import img from "../../../../assets/background.svg"
@@ -6,12 +6,40 @@ import imgb from "../../../../assets/background2.svg"
 import Button from "../../reusables/Button";
 
 const Login = (props) => {
-    let {setState} =props
+    let {setState, setAuthenticated} =props
 
     const inputFields = [
         {label: "Email", placeholder: "Enter your email"},
         {label: "Password", placeholder: "Enter your password"},
     ]
+
+    let initialData={
+        email : "", password:""
+    }
+
+    const [inputData, setInputData] = useState(initialData)
+
+    useEffect(
+        ()=> {
+            console.log("I mounted in LOGIN")
+            return () => {
+                console.log("I unmounted from LOGIN")
+            }
+        }, [inputData]
+    )
+
+
+    const handleLogin= ()=> {
+        if (inputData.email !== "" && inputData.password !== "") {
+            let email = inputData.email
+            localStorage.setItem("userEmail", email)
+            setAuthenticated(true)
+        } else alert("User info is incomplete")
+    }
+    const handleInput = (e) =>{
+        let data = {...inputData, [e.target.name]: e.target.value}
+        setInputData(data)
+    }
     return (
         <div className={"login-container"}>
             <div className={"login-header"}>
@@ -30,9 +58,11 @@ const Login = (props) => {
                 </p>
             </div>
             <div className={"form-container"}>
-                {inputFields.map((field, index)=> <Input key = {index} field={ field}/>)}
+                {inputFields.map((field, index)=>
+                    <Input value = {inputData[field.name]} onChange = {handleInput}
+                           key = {index} field={ field}/>)}
             </div>
-            <Button name = "Login"/>
+            <Button name = "Login" onClick = {handleLogin}/>
             <img className={"bottom-circle"} src={imgb} alt={"circlebackground"}/>
         </div>
     );

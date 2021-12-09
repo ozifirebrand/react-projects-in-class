@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import "./register.css"
 import img from "../../../../assets/background.svg";
 import imgb from "../../../../assets/background2.svg"
@@ -14,6 +14,16 @@ const Register = (props) => {
         firstname: "", lastname: "", email: "", password: "", confirmPassword :""
     }
     const [inputData, setInputData] = useState({initialData})
+
+    useEffect(
+        ()=> {
+            console.log("I mounted in REGISTER")
+            return () => {
+                console.log("I unmounted from REGISTER")
+            }
+        }, [inputData]
+    )
+
 
     function handleInput(e){
         let data= {

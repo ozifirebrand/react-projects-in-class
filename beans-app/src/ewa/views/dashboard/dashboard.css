@@ -1,0 +1,8 @@
+.app_container{
+    background-color: rgb(182, 180, 180);
+    height: 90vh;
+    width: 20vw;
+    padding: 20px;
+    position: relative;
+    z-index: 0;
+}
